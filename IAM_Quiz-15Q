@@ -1,0 +1,211 @@
+Security, Identity & Compliance
+
+1. IAM : Identity and Access Management
+
+IAM users sign-in link:
+https://digital-lync.signin.aws.amazon.com/console
+
+
+What Is IAM?
+AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
+
+When you first create an AWS account, you begin with a single sign-in identity that has complete access to all AWS services and resources in the account. This identity is called the AWS account root user and is accessed by signing in with the email address and password that you used to create the account. We strongly recommend that you do not use the root user for your everyday tasks, even the administrative ones. Instead, adhere to the best practice of using the root user only to create your first IAM user. Then securely lock away the root user credentials and use them to perform only a few account and service management tasks.
+
+Security Status
+
+1. Delete your root access keys
+2. Activate MFA on your root account
+3. Create individual IAM users
+4. Use groups to assign permissions
+5. Apply an IAM password policy
+
+
+#------------------------------------------------#
+Quiz : 15 Questions
+#------------------------------------------------#
+1. You are a security administrator working for a hotel chain. You have a new member of staff who has started as a systems administrator, and she will need full access to the AWS console. You have created the user account and generated the access key id and the secret access key. You have moved this user into the group where the other administrators are, and you have provided the new user with their secret access key and their access key id. However, when she tries to log in to the AWS console, she cannot. Why might that be?
+
+1. You have not yet activated multi-factor authentication for the user, so by default they will not be able to log in.
+
+
+2. Your user is trying to log in from the AWS console from outside the corporate network. This is not possible.
+
+
+3. You cannot log in to the AWS console using the Access Key ID / Secret Access Key pair. Instead, you must generate a password for the user, and supply the user with this password and your organization's unique AWS console login URL.
+
+
+4. You have not applied the "log in from console" policy document to the user. You must apply this first so that they can log in.
+
+ANS : 
+
+#------------------------------------------------#
+
+2. What is the default level of access a newly created IAM User is granted?
+
+1. Power user access to all AWS services.
+
+2. Read only access to all AWS services.
+
+3. Administrator access to all AWS services.
+
+4. No access to any AWS services.
+
+ANS : 
+#------------------------------------------------#
+3. Which of the following is not a component of IAM?
+
+1. Users
+
+2. Roles
+
+3. Groups
+
+4. Organizational Units
+
+ANS : 
+#------------------------------------------------#
+4. Which statement best describes IAM?
+
+1. IAM allows you to manage users' passwords only. AWS staff must create new users for your organization. This is done by raising a ticket.
+
+2. IAM stands for Improvised Application Management, and it allows you to deploy and manage applications in the AWS Cloud.
+
+3. IAM allows you to manage users, groups, roles, and their corresponding level of access to the AWS Platform.
+
+4. IAM allows you to manage permissions for AWS resources only.
+
+ANS : 
+#------------------------------------------------#
+5. What level of access does the "root" account have?
+
+1. No Access
+
+2. Power User Access
+
+3. Read Only Access
+
+4. Administrator Access
+
+ANS : 
+#------------------------------------------------#
+6. Which of the following is not a feature of IAM?
+
+1. IAM allows you to setup biometric authentication, so that no passwords are required.
+
+2. IAM offers centralized control of your AWS account.
+
+3. IAM offers fine-grained access control to AWS resources.
+
+4. IAM integrates with existing active directory account allowing single sign-on.
+
+ANS : 
+#------------------------------------------------#
+7. A new employee has just started work, and it is your job to give her administrator access to the AWS console. You have given her a user name, an access key ID, a secret access key, and you have generated a password for her. She is now able to log in to the AWS console, but she is unable to interact with any AWS services. What should you do next?
+
+1. Require multi-factor authentication for her user account.
+
+2. Ensure she is logging in to the AWS console from your corporate network and not the normal internet.
+
+3. Tell her to log out and try logging back in again.
+
+4. Grant her Administrator access by adding her to the Administrators' group.
+
+ANS : 
+#------------------------------------------------#
+8. When you create a new user, that user ________.
+
+1. Will be able to log in to the console anywhere in the world, using their access key ID and secret access key.
+
+2. Will be able to log in to the console only after multi-factor authentication is enabled on their account.
+
+3. Will be able to interact with AWS using their access key ID and secret access key using the API, CLI, or the AWS SDKs.
+
+4. Will only be able to log in to the console in the region in which that user was created.
+
+ANS : 
+#------------------------------------------------#
+9. What is an additional way to secure the AWS accounts of both the root account and new users alike?
+
+1. Configure the AWS Console so that you can only log in to it from a specific IP Address range
+
+2. Configure the AWS Console so that you can only log in to it from your internal network IP address range.
+
+3. Implement Multi-Factor Authentication for all accounts.
+
+4. Store the access key id and secret access key of all users in a publicly accessible plain text document on S3 of which only you and members of your organization know the address to.
+
+ANS : 
+#------------------------------------------------#
+10. You have a client who is considering a move to AWS. In establishing a new account, what is the first thing the company should do?
+
+1. Set up an account via SNS (Simple Notification Service)
+
+2. Set up an account using Cloud Search.
+
+3. Set up an account using their company email address.
+
+4. Set up an account via SQS (Simple Queue Service)
+
+ANS : 
+#------------------------------------------------#
+11. In what language are policy documents written?
+
+1. Python
+
+2. Java
+
+3. Node.js
+
+4. JSON
+
+ANS : 
+#------------------------------------------------#
+12. You have created a new AWS account for your company, and you have also configured multi-factor authentication on the root account. You are about to create your new users. What strategy should you consider in order to ensure that there is good security on this account.
+
+1. Restrict login to the corporate network only.
+
+2. Enact a strong password policy: user passwords must be changed every 45 days, with each password containing a combination of capital letters, lower case letters, numbers, and special symbols.
+
+3. Give all users the same password so that if they forget their password they can just ask their co-workers.
+
+4. Require users to only be able to log in using biometric authentication.
+
+ANS : 
+#------------------------------------------------#
+13. Power User Access allows ________.
+
+1. Full Access to all AWS services and resources.
+
+2. Access to all AWS services except the management of groups and users within IAM.
+
+3. Read Only access to all AWS services and resources.
+
+4. Users to inspect the source code of the AWS platform
+
+ANS : 
+
+#------------------------------------------------#
+14. You are a developer at a fast growing start up. Until now, you have used the root account to log in to the AWS console. However, as you have taken on more staff, you will now need to stop sharing the root account to prevent accidental damage to your AWS infrastructure. What should you do so that everyone can access the AWS resources they need to do their jobs? (Choose 2)
+
+1. Give your users the root account credentials so that they can also sign in.
+
+2. Create a customized sign in link such as "yourcompany.signin.aws.amazon.com/console" for your new users to use to sign in with.
+
+3. Create an additional AWS root account for each new user.
+
+4. Create individual user accounts with minimum necessary rights and tell the staff to log in to the console using the credentials provided.
+
+ANS : 
+#------------------------------------------------#
+15. You are a solutions architect working for a large engineering company who are moving from a legacy infrastructure to AWS. You have configured the company's first AWS account and you have set up IAM. Your company is based in Andorra, but there will be a small subsidiary operating out of South Korea, so that office will need its own AWS environment. Which of the following statements is true?
+
+1. You will need to configure your users regionally, however your policy documents are global.
+
+2. You will need to configure Users and Policy Documents only once, as these are applied globally.
+
+3. You will need to configure your policy documents regionally, however your users are global.
+
+4. You will then need to configure Users and Policy Documents for each region respectively.
+
+ANS : 
+#------------------------------------------------#
